@@ -3,34 +3,31 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>Ejer04</title>
+        <title>Ejer05</title>
+        <style type="text/css">
+          .titulo{
+            color: red;
+          }
+        </style>
       </head>
       <body>
-        <table border="1">
-          <tr>
-            <th>Título</th>
-            <th>Artista</th>
-            <th>Año</th>
-          </tr>
+        <h1>CD catalog</h1>
+        <ol>
           <xsl:for-each select="//cd">
-            <xsl:choose>
-            <xsl:when test="year&gt;1969">
-            
-              <tr>
-                <td>
-                  <xsl:value-of select="title"/>
-                </td>
-                <td>
-                  <xsl:value-of select="artist"/>
-                </td>
-                <td>
-                  <xsl:value-of select="year"/>
-                </td>
-              </tr>
-              </xsl:when>
-            </xsl:choose>
+            <li>
+              <div class="titulo">
+                <xsl:value-of select="title"/>
+              </div>
+              <xsl:value-of select="artist"/>
+              <xsl:text>,                     </xsl:text>
+              <xsl:value-of select="year"/>
+              <br/>
+              <xsl:text>$</xsl:text>
+              <xsl:value-of select="price"/>
+            </li>
+            <br/>
           </xsl:for-each>
-        </table>
+        </ol>
       </body>
     </html>
   </xsl:template>
