@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mensaje xmlns="http://www.w3schools.com" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                xsi:schemaLocation="http://www.w3schools.com note.xsd">
+  <para>Lola</para>
+  <de>Pepe</de>
+  <asunto>Saludos</asunto>
+  <cuerpo>Buen finde!</cuerpo>
+</mensaje>
